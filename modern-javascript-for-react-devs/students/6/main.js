@@ -1,6 +1,6 @@
 //
 // File: main.js
-// Date: 5/9/203
+// Date: 5/9/2023
 // Imane Allay
 
 //_______________________________________________________
@@ -18,10 +18,17 @@ const ex2 = () => {
 }
 
 const ex3 = () => {
-    const array1 = [1, 2, 3, 4, 5];
+    const array1 = [1, 2, 3, 4, 5,2];
     const array2 = ['a', 'b', 'c', 'd', 'e'];
     console.log(interleave(array1, array2));
 }
+
+const ex4 = () => {
+    
+    console.log(palidrome('radar'));
+    console.log(palidrome('month'));
+ }
+
 
 //
 // Your functions here...
@@ -61,17 +68,41 @@ const minNumber =(array) => {
           array3+=array2[i];
 
         }
+              
+    }if ((array1.length !== array2.length)){
+        console.log("Array length mismatch");
     }
+    
     return array3;
- }
+ } 
+ //-------------------------Exercice 4----------------------
+const palidrome =(str) =>{
+    let re = /[\W_]/g;
+    let lowerRe = str.toLowerCase().replace(re, '');
+    let len = str.length;
+    for(var i = 0; i < len/2; i++){
+        if(str[i] !== str[len - 1 - i]){
+            return false;
+        }
+        return true;
+    }
+    //radar
+
+   
+
+
+}
+ 
 //---------------------------Main-------------------
 const main = async () => {
     console.log("----------The number of numbers:-------------");
     ex1();
     console.log("----------The minimum number:-------------");
     ex2();
-    console.log("----------Interleave:-------------");
+    console.log("----------Interleave two strings:-------------");
     ex3();
+    console.log("----------Palindrome-------------");
+    ex4();
 
 
 }
