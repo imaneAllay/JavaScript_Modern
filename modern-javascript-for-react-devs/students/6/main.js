@@ -112,8 +112,7 @@ const palidrome =(str) =>{
             long = array;
           }
     });
-    return long;
-
+    return long; 
  }
  //-------------------------Exercice 7----------------------
 
