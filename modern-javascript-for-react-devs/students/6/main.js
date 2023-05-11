@@ -44,6 +44,11 @@ const ex7= () => {
 console.log(sort(n));
 }
 
+const ex8 = () => {
+ let words = "Count the words in this string here";
+ console.log(countWords(words));
+}
+
 //
 // Your functions here...
 //
@@ -123,6 +128,11 @@ const sort=(n)=>{
 //  let Ascending=N.reverse();
 return N;
 }
+//-------------------------Exercice 8----------------------
+const countWords =(words) =>{
+   let newStr= words.split(" ").length;
+   return newStr;
+}
 //---------------------------Main-------------------
 const main = async () => {
     // console.log("----------The number of numbers:-------------");
@@ -136,9 +146,11 @@ const main = async () => {
     // console.log("----------Display the number of times the word this:-------------");
     // ex5();
     // console.log("----------returns the longest string from an array of strings:-------------");
-       ex6();
+    //   ex6();
     // console.log("----------Sort:-------------");
-       ex7();
+    //   ex7();
+    // console.log("----------Count words:-------------");
+        ex8();
 
 
 }
