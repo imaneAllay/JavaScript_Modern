@@ -31,9 +31,13 @@ const ex4 = () => {
 
  
 const ex5 = () => {
-    
     let str = "today this is a this is a this is this a test.";
     searchStr(str);
+ }
+
+ const ex6 =() => {
+    let array = ['this', 'is', 'a', 'test', 'happy'];
+    console.log(longestString(array));
  }
 
 
@@ -100,18 +104,32 @@ const palidrome =(str) =>{
     let count=(str.match(/this/g) || []).length;
     console.log("this appears: "+count+" "+ "times."); 
  }
+ //-------------------------Exercice 6----------------------
+ const longestString =(array) => {
+    let long = "";
+    array.forEach(function(array) {
+        if(array.length > long.length) {
+            long = array;
+          }
+    });
+    return long;
+
+ }
+ //-------------------------Exercice 7----------------------
+
 //---------------------------Main-------------------
 const main = async () => {
-    console.log("----------The number of numbers:-------------");
-    ex1();
-    console.log("----------The minimum number:-------------");
-    ex2();
-    console.log("----------Interleave two strings:-------------");
-    ex3();
-    console.log("----------Palindrome-------------");
-    ex4();
-    console.log("----------Display the number of times the word this:-------------");
-    ex5();
+    // console.log("----------The number of numbers:-------------");
+    // ex1();
+    // console.log("----------The minimum number:-------------");
+    // ex2();
+    // console.log("----------Interleave two strings:-------------");
+    // ex3();
+    // console.log("----------Palindrome-------------");
+    // ex4();
+    // console.log("----------Display the number of times the word this:-------------");
+    // ex5();
+    ex6();
 
 
 }
