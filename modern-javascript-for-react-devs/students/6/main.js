@@ -29,6 +29,13 @@ const ex4 = () => {
     console.log(palidrome('month'));
  }
 
+ 
+const ex5 = () => {
+    
+    let str = "today this is a this is a this is this a test.";
+    searchStr(str);
+ }
+
 
 //
 // Your functions here...
@@ -86,13 +93,13 @@ const palidrome =(str) =>{
         }
         return true;
     }
-    //radar
-
-   
-
 
 }
- 
+//-------------------------Exercice 5----------------------
+ const searchStr = (str) => {
+    let count=(str.match(/this/g) || []).length;
+    console.log("this appears: "+count+" "+ "times."); 
+ }
 //---------------------------Main-------------------
 const main = async () => {
     console.log("----------The number of numbers:-------------");
@@ -103,6 +110,8 @@ const main = async () => {
     ex3();
     console.log("----------Palindrome-------------");
     ex4();
+    console.log("----------Display the number of times the word this:-------------");
+    ex5();
 
 
 }
