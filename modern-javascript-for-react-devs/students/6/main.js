@@ -39,7 +39,10 @@ const ex5 = () => {
     let array = ['this', 'is', 'a', 'test', 'happy'];
     console.log(longestString(array));
  }
-
+const ex7= () => {
+ let n = [1, 3, 6, 3, 6, 10];
+console.log(sort(n));
+}
 
 //
 // Your functions here...
@@ -115,7 +118,11 @@ const palidrome =(str) =>{
     return long; 
  }
  //-------------------------Exercice 7----------------------
-
+const sort=(n)=>{
+ let N =n.sort(function(a, b){return a - b});
+//  let Ascending=N.reverse();
+return N;
+}
 //---------------------------Main-------------------
 const main = async () => {
     // console.log("----------The number of numbers:-------------");
@@ -128,7 +135,10 @@ const main = async () => {
     // ex4();
     // console.log("----------Display the number of times the word this:-------------");
     // ex5();
-    ex6();
+    // console.log("----------returns the longest string from an array of strings:-------------");
+       ex6();
+    // console.log("----------Sort:-------------");
+       ex7();
 
 
 }
