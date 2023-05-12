@@ -45,9 +45,14 @@ console.log(sort(n));
 }
 
 const ex8 = () => {
- let words = "Count the words in this string here";
+ let words = "Count the words in this string";
  console.log(countWords(words));
 }
+
+const ex9 = () => {
+    var a = "this counts the number of words that end in s";
+    console.log(countS(a));  
+   }
 
 //
 // Your functions here...
@@ -133,6 +138,13 @@ const countWords =(words) =>{
    let newStr= words.split(" ").length;
    return newStr;
 }
+//-------------------------Exercice 9----------------------
+const countS =(a)=>{
+    return a
+    .split(' ')
+    .filter(function(n) { return n.endsWith("s") })
+    .length;
+}
 //---------------------------Main-------------------
 const main = async () => {
     // console.log("----------The number of numbers:-------------");
@@ -150,7 +162,9 @@ const main = async () => {
     // console.log("----------Sort:-------------");
     //   ex7();
     // console.log("----------Count words:-------------");
-        ex8();
+    //   ex8();
+    // console.log("---------- the number of words that end in s-------------");
+        ex9();
 
 
 }
